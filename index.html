@@ -12,13 +12,13 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url('/jingyuangif.gif'); /* Set your GIF URL here */
-            background-size: cover; /* Cover the entire background */
+            background-image: url('jingyuangif.gif'); /* Set your GIF URL here */
+            background-size:  50%; /* Example size */
             background-repeat: no-repeat; /* Prevent repeating */
             background-position: center; /* Center the background */
         }
         .clock {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
             padding: 27px;
             border: 1px solid black;
             border-radius: 10px;
@@ -58,7 +58,6 @@
                 hour12: true
             });
 
-            const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
             const formattedDate = `${now.toLocaleString('en-US', { weekday: 'short' })} ${now.toLocaleString('en-US', { month: 'short' })} ${now.getDate()} ${now.getFullYear()}`;
 
             document.getElementById('time').textContent = time;
