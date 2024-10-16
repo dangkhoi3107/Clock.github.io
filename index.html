@@ -12,17 +12,30 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url('jingyuangif.gif'); /* Set your GIF URL here */
-            background-size:  50%; /* Example size */
-            background-repeat: no-repeat; /* Prevent repeating */
-            background-position: center; /* Center the background */
+            background-color: #f4f4f9;
         }
         .clock {
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
-            padding: 27px;
+            background-color: rgba(255, 255, 255, 0.5); 
             border: 1px solid black;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 27px;
+        }
+        .clock::before {
+            content: "";
+            background-image: url('jingyuangif.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.7;
+            z-index: -1;
+            border-radius: 10px;
         }
         .clock h1 {
             color: #6495ED;
